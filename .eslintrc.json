@@ -11,6 +11,10 @@
     "sourceType": "module"
   },
   "rules": {
-    "no-console": "error"
+    "no-console": "error",
+    "no-underscore-dangle": "off",
+    "import/prefer-default-export": "off",
+    "prefer-const": "warn",
+    "import/extensions": ["off"]
   }
 }
