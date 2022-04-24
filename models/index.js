@@ -1,3 +1,4 @@
 import { User } from "./user.model.js";
+import { Submission } from "./submission.model.js";
 
-export { User };
+export { User, Submission };
