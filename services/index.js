@@ -1,17 +1,17 @@
 import { save, login } from "./user.service.js";
 import {
-  saveSubmission1,
-  getSubmission1,
-  getSubmissions1,
-  updateSubmission1,
-  deleteSubmission1,
+  saveSubmissionService,
+  getSubmissionService,
+  getSubmissionsService,
+  updateSubmissionService,
+  deleteSubmissionService,
 } from "./submission.service.js";
 import {
-  saveMarkSheet1,
-  getMarkSheet1,
-  getMarkSheets1,
-  updateMarkSheet1,
-  deleteMarkSheet1,
+  saveMarkSheetService,
+  getMarkSheetService,
+  getMarkSheetsService,
+  updateMarkSheetService,
+  deleteMarkSheetService,
 } from "./marksheet.service.js";
 
 export {
@@ -19,15 +19,15 @@ export {
   save,
   login,
   //  submission
-  saveSubmission1,
-  getSubmission1,
-  getSubmissions1,
-  updateSubmission1,
-  deleteSubmission1,
+  saveSubmissionService,
+  getSubmissionService,
+  getSubmissionsService,
+  updateSubmissionService,
+  deleteSubmissionService,
   //  marksheet
-  saveMarkSheet1,
-  getMarkSheet1,
-  getMarkSheets1,
-  updateMarkSheet1,
-  deleteMarkSheet1,
+  saveMarkSheetService,
+  getMarkSheetService,
+  getMarkSheetsService,
+  updateMarkSheetService,
+  deleteMarkSheetService,
 };

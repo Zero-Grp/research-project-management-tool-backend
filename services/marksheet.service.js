@@ -7,7 +7,7 @@ import {
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
-export const saveMarkSheet1 = async (data) => {
+export const saveMarkSheetService = async (data) => {
   const { criteria, distribution } = data;
   try {
     await saveMarkSheet({ criteria, distribution });
@@ -17,7 +17,7 @@ export const saveMarkSheet1 = async (data) => {
   }
 };
 
-export const getMarkSheet1 = async (id) => {
+export const getMarkSheetService = async (id) => {
   try {
     const marksheet = await getMarkSheet(id);
     return Promise.resolve(marksheet);
@@ -26,7 +26,7 @@ export const getMarkSheet1 = async (id) => {
   }
 };
 
-export const getMarkSheets1 = async () => {
+export const getMarkSheetsService = async () => {
   try {
     const marksheets = await getMarkSheets();
     return Promise.resolve(marksheets);
@@ -35,7 +35,7 @@ export const getMarkSheets1 = async () => {
   }
 };
 
-export const updateMarkSheet1 = async (id, data) => {
+export const updateMarkSheetService = async (id, data) => {
   try {
     const marksheet = await updateMarkSheet(id, data);
     return Promise.resolve(marksheet);
@@ -44,7 +44,7 @@ export const updateMarkSheet1 = async (id, data) => {
   }
 };
 
-export const deleteMarkSheet1 = async (id) => {
+export const deleteMarkSheetService = async (id) => {
   try {
     const marksheet = await deleteMarkSheet(id);
     return Promise.resolve(marksheet);

@@ -6,7 +6,6 @@ const SubmissionSchema = new Schema(
   {
     type: String,
     description: String,
-    marksheet: String,
   },
   { versionKey: false },
 );

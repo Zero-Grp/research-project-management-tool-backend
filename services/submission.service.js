@@ -7,17 +7,17 @@ import {
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
-export const saveSubmission1 = async (data) => {
-  const { type, description, marksheet } = data;
+export const saveSubmissionService = async (data) => {
+  const { type, description } = data;
   try {
-    await saveSubmission({ type, description, marksheet });
+    await saveSubmission({ type, description });
     return Promise.resolve("Successfully saved Submission.");
   } catch (err) {
     throw new AppError(err.message, err.status);
   }
 };
 
-export const getSubmission1 = async (id) => {
+export const getSubmissionService = async (id) => {
   try {
     const submission = await getSubmission(id);
     return Promise.resolve(submission);
@@ -26,7 +26,7 @@ export const getSubmission1 = async (id) => {
   }
 };
 
-export const getSubmissions1 = async () => {
+export const getSubmissionsService = async () => {
   try {
     const submissions = await getSubmissions();
     return Promise.resolve(submissions);
@@ -35,7 +35,7 @@ export const getSubmissions1 = async () => {
   }
 };
 
-export const updateSubmission1 = async (id, data) => {
+export const updateSubmissionService = async (id, data) => {
   try {
     const submission = await updateSubmission(id, data);
     return Promise.resolve(submission);
@@ -44,7 +44,7 @@ export const updateSubmission1 = async (id, data) => {
   }
 };
 
-export const deleteSubmission1 = async (id) => {
+export const deleteSubmissionService = async (id) => {
   try {
     const submission = await deleteSubmission(id);
     return Promise.resolve(submission);
