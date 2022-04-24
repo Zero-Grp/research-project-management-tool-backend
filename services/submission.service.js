@@ -8,7 +8,7 @@ import {
 import AppError from "../utils/appError.js";
 
 export const saveSubmission1 = async (data) => {
-  let { type, description, marksheet } = data;
+  const { type, description, marksheet } = data;
   try {
     await saveSubmission({ type, description, marksheet });
     return Promise.resolve("Successfully saved Submission.");
