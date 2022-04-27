@@ -13,6 +13,14 @@ import {
   updateMarkSheet,
   deleteMarkSheet,
 } from "./marksheet.repository.js";
+import {
+  saveGroup,
+  getAllGroups,
+  getGroup,
+  updateGroup,
+  deleteGroup
+} from "./student-group.repository.js";
+
 
 export {
   //  user
@@ -31,4 +39,10 @@ export {
   getMarkSheets,
   updateMarkSheet,
   deleteMarkSheet,
+  // student-group
+  saveGroup,
+  getAllGroups,
+  getGroup,
+  updateGroup,
+  deleteGroup
 };

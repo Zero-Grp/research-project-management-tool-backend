@@ -14,6 +14,14 @@ import {
   deleteMarkSheetService,
 } from "./marksheet.service.js";
 
+import {
+  saveStudentGroup,
+  getAllStudentGroups,
+  getStudentGroup,
+  updateStudentGroup,
+  deleteStudentGroup
+} from "./student-group.service.js";
+
 export {
   //  user
   save,
@@ -30,4 +38,10 @@ export {
   getMarkSheetsService,
   updateMarkSheetService,
   deleteMarkSheetService,
+  // student-group
+  saveStudentGroup,
+  getAllStudentGroups,
+  getStudentGroup,
+  updateStudentGroup,
+  deleteStudentGroup
 };

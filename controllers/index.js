@@ -1,4 +1,5 @@
 import { saveUser, loginUser } from "./user.controller.js";
+
 import {
   saveSubmission,
   getSubmission,
@@ -13,6 +14,14 @@ import {
   updateMarkSheet,
   deleteMarkSheet,
 } from "./marksheet.controller.js";
+import {
+  saveGroup,
+  getAllGroups,
+  getGroup,
+  updateGroup,
+  deleteGroup
+} from "./student-group.controller.js";
+
 
 export {
   //  user
@@ -30,4 +39,10 @@ export {
   getMarkSheets,
   updateMarkSheet,
   deleteMarkSheet,
+  // student-group
+  saveGroup,
+  getAllGroups,
+  getGroup,
+  updateGroup,
+  deleteGroup
 };
