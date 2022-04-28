@@ -1,11 +1,10 @@
 import { saveGroup, getAllGroups, getGroup, updateGroup, deleteGroup } from "../repository/index.js";
 import AppError from "../utils/appError.js";
-import { StudentGroup } from "../models/index.js";
 
 export const saveStudentGroup = async (data) => {
-  let { groupID, groupName, topic } = data;
+  let { groupID, groupName, topic, group_members, panel_members, supervisor, co_supervisor, supervisor_status, co_supervisor_status } = data;
   try {
-    const group = await saveGroup({ groupID, groupName, topic });
+    const group = await saveGroup({ groupID, groupName, topic, group_members, panel_members, supervisor, co_supervisor, supervisor_status, co_supervisor_status });
     return Promise.resolve( group );
   } catch (err) {
     throw new AppError(err.message, err.status);
@@ -13,7 +12,6 @@ export const saveStudentGroup = async (data) => {
 };
 
 export const getAllStudentGroups = async () => {
-  //let { StudentGroup } = data;
   try {
     const groups = await getAllGroups();
     if (groups.length == 0) {
@@ -40,9 +38,9 @@ export const getStudentGroup = async (data) => {
 };
 
 export const updateStudentGroup = async (data) => {
-  let { groupID, groupName, topic } = data;
+  let { groupID, groupName, topic, group_members, panel_members, supervisor, co_supervisor, supervisor_status, co_supervisor_status } = data;
   try {
-    const modifiedGroup = await updateGroup(groupID, { groupID, groupName, topic });
+    const modifiedGroup = await updateGroup(groupID, { groupID, groupName, topic, group_members, panel_members, supervisor, co_supervisor, supervisor_status, co_supervisor_status });
     return Promise.resolve( modifiedGroup );
   } catch (err) {
     throw new AppError(err.message, err.status);
