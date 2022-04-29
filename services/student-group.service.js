@@ -2,9 +2,8 @@ import { saveGroup, getAllGroups, getGroup, updateGroup, deleteGroup } from "../
 import AppError from "../utils/appError.js";
 
 export const saveStudentGroup = async (data) => {
-  let { groupID, groupName, topic, group_members, panel_members, supervisor, co_supervisor, supervisor_status, co_supervisor_status } = data;
   try {
-    const group = await saveGroup({ groupID, groupName, topic, group_members, panel_members, supervisor, co_supervisor, supervisor_status, co_supervisor_status });
+    const group = await saveGroup( data );
     return Promise.resolve( group );
   } catch (err) {
     throw new AppError(err.message, err.status);
@@ -40,7 +39,7 @@ export const getStudentGroup = async (data) => {
 export const updateStudentGroup = async (data) => {
   let { groupID, groupName, topic, group_members, panel_members, supervisor, co_supervisor, supervisor_status, co_supervisor_status } = data;
   try {
-    const modifiedGroup = await updateGroup(groupID, { groupID, groupName, topic, group_members, panel_members, supervisor, co_supervisor, supervisor_status, co_supervisor_status });
+    const modifiedGroup = await updateGroup(groupID, data);
     return Promise.resolve( modifiedGroup );
   } catch (err) {
     throw new AppError(err.message, err.status);
