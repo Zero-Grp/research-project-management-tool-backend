@@ -13,6 +13,13 @@ import {
   updateMarkSheet,
   deleteMarkSheet,
 } from "./marksheet.repository.js";
+import {
+  saveStage,
+  getStage,
+  getStages,
+  updateStage,
+  deleteStage,
+} from "./stage.repository.js";
 
 export {
   //  user
@@ -31,4 +38,10 @@ export {
   getMarkSheets,
   updateMarkSheet,
   deleteMarkSheet,
+  //  stage
+  saveStage,
+  getStage,
+  getStages,
+  updateStage,
+  deleteStage,
 };

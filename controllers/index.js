@@ -13,6 +13,13 @@ import {
   updateMarkSheet,
   deleteMarkSheet,
 } from "./marksheet.controller.js";
+import {
+  saveStage,
+  getStage,
+  getStages,
+  updateStage,
+  deleteStage,
+} from "./stage.controller.js";
 
 export {
   //  user
@@ -30,4 +37,10 @@ export {
   getMarkSheets,
   updateMarkSheet,
   deleteMarkSheet,
+  //  stage
+  saveStage,
+  getStage,
+  getStages,
+  updateStage,
+  deleteStage,
 };

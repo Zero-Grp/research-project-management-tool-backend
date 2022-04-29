@@ -13,6 +13,13 @@ import {
   updateMarkSheetService,
   deleteMarkSheetService,
 } from "./marksheet.service.js";
+import {
+  saveStageService,
+  getStageService,
+  getStagesService,
+  updateStageService,
+  deleteStageService,
+} from "./stage.service.js";
 
 export {
   //  user
@@ -30,4 +37,10 @@ export {
   getMarkSheetsService,
   updateMarkSheetService,
   deleteMarkSheetService,
+  //  stage
+  saveStageService,
+  getStageService,
+  getStagesService,
+  updateStageService,
+  deleteStageService,
 };
