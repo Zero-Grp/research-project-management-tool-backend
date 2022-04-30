@@ -13,6 +13,20 @@ import {
   updateMarkSheetService,
   deleteMarkSheetService,
 } from "./marksheet.service.js";
+import {
+  saveTopicService,
+  getTopicService,
+  getTopicsByGroupService,
+  updateTopicService,
+  deleteTopicService,
+} from "./topic.service.js";
+import {
+  saveChatService,
+  getChatService,
+  getChatsByGroupService,
+  updateChatService,
+  deleteChatService,
+} from "./chat.service.js";
 
 export {
   //  user
@@ -30,4 +44,16 @@ export {
   getMarkSheetsService,
   updateMarkSheetService,
   deleteMarkSheetService,
+  //  topic
+  saveTopicService,
+  getTopicService,
+  getTopicsByGroupService,
+  updateTopicService,
+  deleteTopicService,
+  // chat
+  saveChatService,
+  getChatService,
+  getChatsByGroupService,
+  updateChatService,
+  deleteChatService,
 };
