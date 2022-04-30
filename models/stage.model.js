@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const StageSchema = new Schema(
   {
     submissionType: {
-      type: [Schema.Types.ObjectId],
+      type: Schema.Types.ObjectId,
       ref: "Submission",
     },
     status: Boolean,
@@ -14,18 +14,18 @@ const StageSchema = new Schema(
       ref: "User",
     },
     marksheet: {
-      type: [Schema.Types.ObjectId],
+      type: Schema.Types.ObjectId,
       ref: "Marksheet",
     },
     result: String,
     document: String,
-    createdAt: Date,
     dueDate: Date,
-    createdBy: {
-      type: [Schema.Types.ObjectId],
-      ref: "User",
+    group: {
+      type: Schema.Types.ObjectId,
+      ref: "Group",
     },
   },
+  { timestamps: true },
   { versionKey: false },
 );
 
