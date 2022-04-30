@@ -29,4 +29,6 @@ const StageSchema = new Schema(
   { versionKey: false },
 );
 
+StageSchema.index({ createdAt: 1 });
+
 export const Stage = mongoose.model("Stage", StageSchema);
