@@ -1,4 +1,11 @@
-import { saveUser, loginUser } from "./user.controller.js";
+import {
+  saveUser,
+  loginUser,
+  getUserbyId,
+  deleteUserById,
+  getUsersByTypes,
+  updateUserDataByID,
+} from "./user.controller.js";
 import {
   saveSubmission,
   getSubmission,
@@ -32,6 +39,10 @@ export {
   //  user
   saveUser,
   loginUser,
+  getUserbyId,
+  deleteUserById,
+  getUsersByTypes,
+  updateUserDataByID,
   //  submission
   saveSubmission,
   getSubmission,

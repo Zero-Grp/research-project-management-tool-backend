@@ -1,4 +1,11 @@
-import { save, login } from "./user.service.js";
+import {
+  save,
+  login,
+  userByID,
+  deleteByID,
+  getUsersByType,
+  updateUserByID,
+} from "./user.service.js";
 import {
   saveSubmissionService,
   getSubmissionService,
@@ -32,6 +39,10 @@ export {
   //  user
   save,
   login,
+  userByID,
+  deleteByID,
+  getUsersByType,
+  updateUserByID,
   //  submission
   saveSubmissionService,
   getSubmissionService,
