@@ -1,3 +1,59 @@
 import { saveUser, loginUser } from "./user.controller.js";
+import {
+  saveSubmission,
+  getSubmission,
+  getSubmissions,
+  updateSubmission,
+  deleteSubmission,
+} from "./submission.controller.js";
+import {
+  saveMarkSheet,
+  getMarkSheet,
+  getMarkSheets,
+  updateMarkSheet,
+  deleteMarkSheet,
+} from "./marksheet.controller.js";
+import {
+  saveTopic,
+  getTopic,
+  getTopicsByGroup,
+  updateTopic,
+  deleteTopic,
+} from "./topic.controller.js";
+import {
+  saveChat,
+  getChat,
+  getChatsByGroup,
+  updateChat,
+  deleteChat,
+} from "./chat.controller.js";
 
-export { saveUser, loginUser };
+export {
+  //  user
+  saveUser,
+  loginUser,
+  //  submission
+  saveSubmission,
+  getSubmission,
+  getSubmissions,
+  updateSubmission,
+  deleteSubmission,
+  //  marksheet
+  saveMarkSheet,
+  getMarkSheet,
+  getMarkSheets,
+  updateMarkSheet,
+  deleteMarkSheet,
+  //  topic
+  saveTopic,
+  getTopic,
+  getTopicsByGroup,
+  updateTopic,
+  deleteTopic,
+  // chat
+  saveChat,
+  getChat,
+  getChatsByGroup,
+  updateChat,
+  deleteChat,
+};
