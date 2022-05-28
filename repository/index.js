@@ -20,6 +20,20 @@ import {
   updateStage,
   deleteStage,
 } from "./stage.repository.js";
+import {
+  saveTopic,
+  getTopic,
+  getTopicsByGroup,
+  updateTopic,
+  deleteTopic,
+} from "./topic.repository.js";
+import {
+  saveChat,
+  getChat,
+  getChatsByGroup,
+  updateChat,
+  deleteChat,
+} from "./chat.repository.js";
 
 export {
   //  user
@@ -44,4 +58,16 @@ export {
   getStages,
   updateStage,
   deleteStage,
+  //  topic
+  saveTopic,
+  getTopic,
+  getTopicsByGroup,
+  updateTopic,
+  deleteTopic,
+  // chat
+  saveChat,
+  getChat,
+  getChatsByGroup,
+  updateChat,
+  deleteChat,
 };

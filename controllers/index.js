@@ -20,6 +20,20 @@ import {
   updateStage,
   deleteStage,
 } from "./stage.controller.js";
+import {
+  saveTopic,
+  getTopic,
+  getTopicsByGroup,
+  updateTopic,
+  deleteTopic,
+} from "./topic.controller.js";
+import {
+  saveChat,
+  getChat,
+  getChatsByGroup,
+  updateChat,
+  deleteChat,
+} from "./chat.controller.js";
 
 export {
   //  user
@@ -43,4 +57,16 @@ export {
   getStages,
   updateStage,
   deleteStage,
+  //  topic
+  saveTopic,
+  getTopic,
+  getTopicsByGroup,
+  updateTopic,
+  deleteTopic,
+  // chat
+  saveChat,
+  getChat,
+  getChatsByGroup,
+  updateChat,
+  deleteChat,
 };

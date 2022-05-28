@@ -20,6 +20,21 @@ import {
   updateStageService,
   deleteStageService,
 } from "./stage.service.js";
+import {
+  saveTopicService,
+  getTopicService,
+  getTopicsByGroupService,
+  updateTopicService,
+  deleteTopicService,
+} from "./topic.service.js";
+import {
+  saveChatService,
+  getChatService,
+  getChatsByGroupService,
+  updateChatService,
+  deleteChatService,
+} from "./chat.service.js";
+
 
 export {
   //  user
@@ -43,4 +58,16 @@ export {
   getStagesService,
   updateStageService,
   deleteStageService,
+  //  topic
+  saveTopicService,
+  getTopicService,
+  getTopicsByGroupService,
+  updateTopicService,
+  deleteTopicService,
+  // chat
+  saveChatService,
+  getChatService,
+  getChatsByGroupService,
+  updateChatService,
+  deleteChatService,
 };
