@@ -1,6 +1,14 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { saveUser, loginUser, getUser } from "../repository/index.js";
+import {
+  saveUser,
+  loginUser,
+  getUser,
+  getUserByID,
+  deleteUser,
+  getUsers,
+  updateUser,
+} from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
 export const save = async (data) => {
@@ -36,6 +44,75 @@ export const login = async (data) => {
         const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
         return Promise.resolve({ token });
       }
+    }
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const userByID = async (data) => {
+  const { userName } = data;
+  try {
+    const User = await getUserByID(userName);
+    if (!User) {
+      throw new AppError("User does not exists.", 400);
+    } else {
+      return Promise.resolve({ User });
+    }
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const deleteByID = async (data) => {
+  const { userName } = data;
+  try {
+    const user = await getUserByID(userName);
+    if (!user) {
+      throw new AppError("User does not exist.", 404);
+    } else {
+      const del = await deleteUser(userName);
+      if (!del) {
+        throw new AppError("Delete Failed", 400);
+      } else {
+        return Promise.resolve(del.deletedCount);
+      }
+    }
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getUsersByType = async (data) => {
+  const { role } = data;
+  try {
+    const User = await getUsers(role);
+    if (!User) {
+      throw new AppError("Users does not exists.", 400);
+    } else {
+      return Promise.resolve({ User });
+    }
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const updateUserByID = async (data) => {
+  const myquery = { userName: data.userName };
+  const newvalues = {
+    $set: {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+      role: data.role,
+    },
+  };
+  try {
+    const user = await updateUser(myquery, newvalues);
+    if (!user) {
+      throw new AppError("User Update Fail", 400);
+    } else {
+      return Promise.resolve({ user });
     }
   } catch (err) {
     throw new AppError(err.message, err.status);

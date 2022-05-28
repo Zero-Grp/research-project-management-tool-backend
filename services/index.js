@@ -1,4 +1,11 @@
-import { save, login } from "./user.service.js";
+import {
+  save,
+  login,
+  userByID,
+  deleteByID,
+  getUsersByType,
+  updateUserByID,
+} from "./user.service.js";
 import {
   saveSubmissionService,
   getSubmissionService,
@@ -34,12 +41,22 @@ import {
   updateChatService,
   deleteChatService,
 } from "./chat.service.js";
-
+import {
+  saveStudentGroup,
+  getAllStudentGroups,
+  getStudentGroup,
+  updateStudentGroup,
+  deleteStudentGroup,
+} from "./student-group.service.js";
 
 export {
   //  user
   save,
   login,
+  userByID,
+  deleteByID,
+  getUsersByType,
+  updateUserByID,
   //  submission
   saveSubmissionService,
   getSubmissionService,
@@ -52,6 +69,12 @@ export {
   getMarkSheetsService,
   updateMarkSheetService,
   deleteMarkSheetService,
+  // student-group
+  saveStudentGroup,
+  getAllStudentGroups,
+  getStudentGroup,
+  updateStudentGroup,
+  deleteStudentGroup,
   //  stage
   saveStageService,
   getStageService,
