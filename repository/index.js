@@ -1,4 +1,12 @@
-import { saveUser, loginUser, getUser } from "./user.repository.js";
+import {
+  saveUser,
+  loginUser,
+  getUser,
+  getUserByID,
+  deleteUser,
+  getUsers,
+  updateUser,
+} from "./user.repository.js";
 import {
   saveSubmission,
   getSubmission,
@@ -47,6 +55,10 @@ export {
   saveUser,
   loginUser,
   getUser,
+  getUserByID,
+  deleteUser,
+  getUsers,
+  updateUser,
   //  submission
   saveSubmission,
   getSubmission,
