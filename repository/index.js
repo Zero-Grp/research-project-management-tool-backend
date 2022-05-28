@@ -14,6 +14,13 @@ import {
   deleteMarkSheet,
 } from "./marksheet.repository.js";
 import {
+  saveStage,
+  getStage,
+  getStages,
+  updateStage,
+  deleteStage,
+} from "./stage.repository.js";
+import {
   saveTopic,
   getTopic,
   getTopicsByGroup,
@@ -45,6 +52,12 @@ export {
   getMarkSheets,
   updateMarkSheet,
   deleteMarkSheet,
+  //  stage
+  saveStage,
+  getStage,
+  getStages,
+  updateStage,
+  deleteStage,
   //  topic
   saveTopic,
   getTopic,
