@@ -1,4 +1,10 @@
-import { saveStudentGroup, getAllStudentGroups, getStudentGroup, updateStudentGroup, deleteStudentGroup } from "../services/index.js";
+import {
+  saveStudentGroup,
+  getAllStudentGroups,
+  getStudentGroup,
+  updateStudentGroup,
+  deleteStudentGroup,
+} from "../services/index.js";
 import Success from "../utils/success.js";
 
 export const saveGroup = async (req, res) => {
@@ -20,7 +26,7 @@ export const getAllGroups = async (req, res) => {
 };
 
 export const getGroup = async (req, res) => {
-  const id = Number (req.params.id);
+  const id = Number(req.params.id);
   try {
     const group = await getStudentGroup(id);
     res.json(Success(group));
@@ -39,7 +45,7 @@ export const updateGroup = async (req, res) => {
 };
 
 export const deleteGroup = async (req, res) => {
-  const id = Number (req.params.id);
+  const id = Number(req.params.id);
   try {
     const result = await deleteStudentGroup(id);
     res.json(Success(result, "Group deleted successfully."));

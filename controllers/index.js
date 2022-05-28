@@ -1,4 +1,11 @@
-import { saveUser, loginUser } from "./user.controller.js";
+import {
+  saveUser,
+  loginUser,
+  getUserbyId,
+  deleteUserById,
+  getUsersByTypes,
+  updateUserDataByID,
+} from "./user.controller.js";
 import {
   saveSubmission,
   getSubmission,
@@ -18,7 +25,7 @@ import {
   getAllGroups,
   getGroup,
   updateGroup,
-  deleteGroup
+  deleteGroup,
 } from "./student-group.controller.js";
 import {
   saveStage,
@@ -46,6 +53,10 @@ export {
   //  user
   saveUser,
   loginUser,
+  getUserbyId,
+  deleteUserById,
+  getUsersByTypes,
+  updateUserDataByID,
   //  submission
   saveSubmission,
   getSubmission,
@@ -63,7 +74,7 @@ export {
   getAllGroups,
   getGroup,
   updateGroup,
-  deleteGroup
+  deleteGroup,
   //  stage
   saveStage,
   getStage,

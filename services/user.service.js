@@ -98,8 +98,8 @@ export const getUsersByType = async (data) => {
 };
 
 export const updateUserByID = async (data) => {
-  let myquery = { userName: data.userName };
-  let newvalues = {
+  const myquery = { userName: data.userName };
+  const newvalues = {
     $set: {
       firstName: data.firstName,
       lastName: data.lastName,

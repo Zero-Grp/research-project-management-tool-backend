@@ -9,19 +9,19 @@ const StudentGroupSchema = new Schema(
     topic: String,
     group_members: {
       type: [Schema.Types.ObjectId],
-      ref: 'User'
+      ref: "User",
     },
     panel_members: {
       type: [Schema.Types.ObjectId],
-      ref: 'User'
+      ref: "User",
     },
     supervisor: {
       type: Schema.Types.ObjectId,
-      ref: 'User'
+      ref: "User",
     },
     co_supervisor: {
       type: Schema.Types.ObjectId,
-      ref: 'User'
+      ref: "User",
     },
     supervisor_status: "String",
     co_supervisor_status: "String",

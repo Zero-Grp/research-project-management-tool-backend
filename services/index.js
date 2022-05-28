@@ -46,7 +46,7 @@ import {
   getAllStudentGroups,
   getStudentGroup,
   updateStudentGroup,
-  deleteStudentGroup
+  deleteStudentGroup,
 } from "./student-group.service.js";
 
 export {
@@ -74,7 +74,7 @@ export {
   getAllStudentGroups,
   getStudentGroup,
   updateStudentGroup,
-  deleteStudentGroup
+  deleteStudentGroup,
   //  stage
   saveStageService,
   getStageService,

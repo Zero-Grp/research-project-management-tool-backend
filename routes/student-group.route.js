@@ -1,5 +1,11 @@
 import express from "express";
-import { saveGroup, getAllGroups, getGroup, updateGroup, deleteGroup } from "../controllers/index.js";
+import {
+  saveGroup,
+  getAllGroups,
+  getGroup,
+  updateGroup,
+  deleteGroup,
+} from "../controllers/index.js";
 
 const studentGroupRouter = express.Router();
 

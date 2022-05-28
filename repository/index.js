@@ -26,7 +26,7 @@ import {
   getAllGroups,
   getGroup,
   updateGroup,
-  deleteGroup
+  deleteGroup,
 } from "./student-group.repository.js";
 import {
   saveStage,
@@ -76,7 +76,7 @@ export {
   getAllGroups,
   getGroup,
   updateGroup,
-  deleteGroup
+  deleteGroup,
   //  stage
   saveStage,
   getStage,
