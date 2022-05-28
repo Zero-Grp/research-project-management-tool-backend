@@ -14,6 +14,13 @@ import {
   deleteMarkSheet,
 } from "./marksheet.controller.js";
 import {
+  saveStage,
+  getStage,
+  getStages,
+  updateStage,
+  deleteStage,
+} from "./stage.controller.js";
+import {
   saveTopic,
   getTopic,
   getTopicsByGroup,
@@ -44,6 +51,12 @@ export {
   getMarkSheets,
   updateMarkSheet,
   deleteMarkSheet,
+  //  stage
+  saveStage,
+  getStage,
+  getStages,
+  updateStage,
+  deleteStage,
   //  topic
   saveTopic,
   getTopic,

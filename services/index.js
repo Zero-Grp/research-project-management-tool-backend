@@ -14,6 +14,13 @@ import {
   deleteMarkSheetService,
 } from "./marksheet.service.js";
 import {
+  saveStageService,
+  getStageService,
+  getStagesService,
+  updateStageService,
+  deleteStageService,
+} from "./stage.service.js";
+import {
   saveTopicService,
   getTopicService,
   getTopicsByGroupService,
@@ -27,6 +34,7 @@ import {
   updateChatService,
   deleteChatService,
 } from "./chat.service.js";
+
 
 export {
   //  user
@@ -44,6 +52,12 @@ export {
   getMarkSheetsService,
   updateMarkSheetService,
   deleteMarkSheetService,
+  //  stage
+  saveStageService,
+  getStageService,
+  getStagesService,
+  updateStageService,
+  deleteStageService,
   //  topic
   saveTopicService,
   getTopicService,
