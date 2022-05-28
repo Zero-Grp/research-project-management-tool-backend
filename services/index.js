@@ -34,7 +34,13 @@ import {
   updateChatService,
   deleteChatService,
 } from "./chat.service.js";
-
+import {
+  saveStudentGroup,
+  getAllStudentGroups,
+  getStudentGroup,
+  updateStudentGroup,
+  deleteStudentGroup
+} from "./student-group.service.js";
 
 export {
   //  user
@@ -52,6 +58,12 @@ export {
   getMarkSheetsService,
   updateMarkSheetService,
   deleteMarkSheetService,
+  // student-group
+  saveStudentGroup,
+  getAllStudentGroups,
+  getStudentGroup,
+  updateStudentGroup,
+  deleteStudentGroup
   //  stage
   saveStageService,
   getStageService,
