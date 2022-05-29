@@ -2,7 +2,7 @@
   "name": "research-project-management-tool-backend",
   "version": "1.0.0",
   "description": "Backend of a system, which has the capability of managing the Research projects and automating certain tasks.",
-  "main": "app.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node server.js",
