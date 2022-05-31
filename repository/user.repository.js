@@ -63,3 +63,12 @@ export const updateUser = (userName, data) =>
     .catch(() => {
       throw new AppError("Internal Server Error", 500);
     });
+
+export const getAllUsers = () =>
+  User.find()
+    .then((users) => {
+      return Promise.resolve(users);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });

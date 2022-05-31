@@ -5,6 +5,7 @@ import {
   deleteByID,
   getUsersByType,
   updateUserByID,
+  getUsersService,
 } from "./user.service.js";
 import {
   saveSubmissionService,
@@ -57,6 +58,7 @@ export {
   deleteByID,
   getUsersByType,
   updateUserByID,
+  getUsersService,
   //  submission
   saveSubmissionService,
   getSubmissionService,
