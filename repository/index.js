@@ -7,6 +7,7 @@ import {
   getUsers,
   updateUser,
   getAllUsers,
+  getOneUser,
 } from "./user.repository.js";
 import {
   saveSubmission,
@@ -61,6 +62,7 @@ export {
   getUsers,
   updateUser,
   getAllUsers,
+  getOneUser,
   //  submission
   saveSubmission,
   getSubmission,
