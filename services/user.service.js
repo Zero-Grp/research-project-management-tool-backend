@@ -8,6 +8,7 @@ import {
   deleteUser,
   getUsers,
   updateUser,
+  getAllUsers,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -114,6 +115,15 @@ export const updateUserByID = async (data) => {
     } else {
       return Promise.resolve({ user });
     }
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getUsersService = async () => {
+  try {
+    const users = await getAllUsers();
+    return Promise.resolve(users);
   } catch (err) {
     throw new AppError(err.message, err.status);
   }

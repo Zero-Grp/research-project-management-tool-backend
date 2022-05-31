@@ -5,6 +5,7 @@ import {
   deleteUserById,
   getUsersByTypes,
   updateUserDataByID,
+  getAll,
 } from "./user.controller.js";
 import {
   saveSubmission,
@@ -57,6 +58,7 @@ export {
   deleteUserById,
   getUsersByTypes,
   updateUserDataByID,
+  getAll,
   //  submission
   saveSubmission,
   getSubmission,

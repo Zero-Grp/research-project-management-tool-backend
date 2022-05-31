@@ -6,6 +6,7 @@ import {
   deleteUser,
   getUsers,
   updateUser,
+  getAllUsers,
 } from "./user.repository.js";
 import {
   saveSubmission,
@@ -59,6 +60,7 @@ export {
   deleteUser,
   getUsers,
   updateUser,
+  getAllUsers,
   //  submission
   saveSubmission,
   getSubmission,
