@@ -9,6 +9,7 @@ import {
   getUsers,
   updateUser,
   getAllUsers,
+  getOneUser,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -124,6 +125,15 @@ export const getUsersService = async () => {
   try {
     const users = await getAllUsers();
     return Promise.resolve(users);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getOneUserService = async (id) => {
+  try {
+    const user = await getOneUser(id);
+    return Promise.resolve(user);
   } catch (err) {
     throw new AppError(err.message, err.status);
   }

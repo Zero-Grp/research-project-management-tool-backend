@@ -72,3 +72,15 @@ export const getAllUsers = () =>
     .catch(() => {
       throw new AppError("Internal server error.", 500);
     });
+
+export const getOneUser = (id) =>
+  User.findById(id)
+    .then((user) => {
+      if (!user) {
+        throw new AppError("User not found.", 404);
+      }
+      return Promise.resolve(user);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });

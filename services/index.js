@@ -6,6 +6,7 @@ import {
   getUsersByType,
   updateUserByID,
   getUsersService,
+  getOneUserService,
 } from "./user.service.js";
 import {
   saveSubmissionService,
@@ -59,6 +60,7 @@ export {
   getUsersByType,
   updateUserByID,
   getUsersService,
+  getOneUserService,
   //  submission
   saveSubmissionService,
   getSubmissionService,
