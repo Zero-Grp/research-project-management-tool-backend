@@ -22,6 +22,8 @@ export const getStage = (id) => {
 
 export const getStages = () => {
   return Stage.find()
+    .populate("submissionType")
+    .populate("reviewer")
     .then((stages) => {
       return Promise.resolve(stages);
     })
