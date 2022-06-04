@@ -5,6 +5,8 @@ import {
   deleteByID,
   getUsersByType,
   updateUserByID,
+  getUsersService,
+  getOneUserService,
 } from "../services/index.js";
 import Success from "../utils/success.js";
 
@@ -57,6 +59,24 @@ export const updateUserDataByID = async (req, res) => {
   try {
     const userd = await updateUserByID(req.body);
     res.json(Success(userd, "Users Updated Succesfully"));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const getAll = async (req, res) => {
+  try {
+    const users = await getUsersService();
+    res.json(Success(users, "Successfully fetched Users."));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const getOneByID = async (req, res) => {
+  try {
+    const user = await getOneUserService(req.params.id);
+    res.json(Success(user, "Successfully fetched User."));
   } catch (err) {
     res.status(err.status).json(err.message);
   }

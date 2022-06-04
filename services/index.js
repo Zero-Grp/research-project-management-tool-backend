@@ -5,6 +5,8 @@ import {
   deleteByID,
   getUsersByType,
   updateUserByID,
+  getUsersService,
+  getOneUserService,
 } from "./user.service.js";
 import {
   saveSubmissionService,
@@ -21,6 +23,13 @@ import {
   deleteMarkSheetService,
 } from "./marksheet.service.js";
 import {
+  saveStageService,
+  getStageService,
+  getStagesService,
+  updateStageService,
+  deleteStageService,
+} from "./stage.service.js";
+import {
   saveTopicService,
   getTopicService,
   getTopicsByGroupService,
@@ -34,6 +43,13 @@ import {
   updateChatService,
   deleteChatService,
 } from "./chat.service.js";
+import {
+  saveStudentGroup,
+  getAllStudentGroups,
+  getStudentGroup,
+  updateStudentGroup,
+  deleteStudentGroup,
+} from "./student-group.service.js";
 
 export {
   //  user
@@ -43,6 +59,8 @@ export {
   deleteByID,
   getUsersByType,
   updateUserByID,
+  getUsersService,
+  getOneUserService,
   //  submission
   saveSubmissionService,
   getSubmissionService,
@@ -55,6 +73,18 @@ export {
   getMarkSheetsService,
   updateMarkSheetService,
   deleteMarkSheetService,
+  // student-group
+  saveStudentGroup,
+  getAllStudentGroups,
+  getStudentGroup,
+  updateStudentGroup,
+  deleteStudentGroup,
+  //  stage
+  saveStageService,
+  getStageService,
+  getStagesService,
+  updateStageService,
+  deleteStageService,
   //  topic
   saveTopicService,
   getTopicService,
