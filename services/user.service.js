@@ -43,7 +43,10 @@ export const login = async (data) => {
       if (!isMatch) {
         throw new AppError("Password is incorrect.", 400);
       } else {
-        const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
+        const token = jwt.sign(
+          { id: user.userName, role: user.role },
+          process.env.JWT_SECRET,
+        );
         return Promise.resolve({ token });
       }
     }
