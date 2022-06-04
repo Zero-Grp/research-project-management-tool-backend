@@ -6,7 +6,6 @@ const StudentGroupSchema = new Schema(
   {
     groupID: Number,
     groupName: String,
-    topic: String,
     group_members: {
       type: [Schema.Types.ObjectId],
       ref: "User",
